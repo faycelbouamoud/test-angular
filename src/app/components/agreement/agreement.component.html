@@ -1,0 +1,72 @@
+
+  <div class="container">
+    <mat-card class="example-card card-agreement" detect-scroll (onScroll)="checkEndOfCard($event)" [topOffset]="20"
+      [bottomOffset]="10">
+      <mat-card-header>
+        <mat-card-title>Agreement</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, odit. Saepe ullam possimus velit dolor est,
+          exercitationem accusantium nisi maiores alias repellat porro odit ratione, quas unde sit sunt culpa et
+          perferendis, quaerat harum totam illo! Eaque ducimus dolor labore! Magnam facere fugiat ullam quibusdam nemo
+          aliquam explicabo fuga ipsum provident nobis eum dignissimos, rem cumque adipisci numquam, assumenda quidem
+          accusantium eligendi qui exercitationem deleniti ea odit! Temporibus animi accusamus placeat eius, ad corrupti
+          facere magnam ullam velit obcaecati earum et accusantium sapiente sequi repellendus nisi perferendis sint quas
+          alias exercitationem corporis, quaerat ratione quis? Autem harum ad ducimus quibusdam! Repudiandae aspernatur
+          soluta commodi in voluptatibus est itaque, sit, veniam magnam, vel asperiores earum. Doloribus modi inventore
+          itaque suscipit adipisci, ea ex quo quidem molestiae laudantium beatae dolorum animi mollitia sapiente maxime.
+          Amet delectus consectetur minus, in a consequatur, esse adipisci officiis eos vel unde ipsum voluptatibus
+          repellat eaque iusto quos placeat nobis? Recusandae, veritatis ab. Perferendis provident nobis aut,
+          reprehenderit
+          porro aperiam facere sed quibusdam odio aliquam a suscipit similique doloribus nemo quam accusantium, at cumque
+          fuga! Fuga, impedit doloribus accusantium suscipit nulla cum dolore! Quasi corrupti dolore incidunt quis enim
+          quisquam ipsa voluptatem officiis at quae provident dolor, perferendis voluptatum quos pariatur culpa ducimus
+          sint ab assumenda facere fugit quibusdam doloribus nulla! Cupiditate, doloremque quo vero totam impedit
+          consectetur ex molestias incidunt illo. Vel voluptatibus esse laudantium, quidem incidunt quod necessitatibus
+          fugiat quas ratione modi labore laborum sequi nisi excepturi qui libero! Pariatur a earum voluptatum debitis
+          sapiente labore aspernatur modi porro ipsum amet quod, corrupti necessitatibus adipisci cum, quaerat impedit
+          molestias sit optio. Tempora fuga doloribus a maiores debitis. Cumque fugit esse dolor blanditiis magni dolorum
+          modi, iure enim impedit, quibusdam cupiditate reprehenderit? Ad sit hic architecto nostrum eos consequuntur
+          provident quo, necessitatibus delectus velit, quibusdam voluptatem pariatur natus quas. Doloremque corrupti
+          earum
+          nostrum fugiat inventore laborum libero ipsa corporis illum veniam saepe, deserunt, ab repudiandae fuga error,
+          nesciunt debitis minus esse consequatur laboriosam at quos consectetur perferendis dolorum. Dicta voluptas
+          labore
+          obcaecati, sunt praesentium odio doloribus provident libero ea laborum consequuntur modi quod hic odit
+          laudantium
+          esse. Dignissimos molestias atque porro veritatis cum reiciendis consequuntur rem saepe explicabo dolor harum
+          sit
+          asperiores nostrum quam, temporibus obcaecati odit, in rerum, quisquam totam officia laborum quas. Dolores
+          ipsum
+          vero nam temporibus culpa officiis suscipit autem harum, totam voluptatibus nisi placeat impedit quaerat minima
+          ullam possimus illo alias et architecto, ab enim in voluptatum, recusandae atque. Cum doloribus eveniet sequi
+          nesciunt quis! Necessitatibus quibusdam maiores natus! Officia molestiae quo maxime tenetur ducimus pariatur
+          optio est voluptates, molestias repellendus ratione sint a nulla vero omnis totam dicta numquam. Voluptatum
+          dignissimos dolores voluptatem architecto debitis commodi sunt provident sed ut cupiditate assumenda iusto,
+          impedit asperiores quod eaque atque, autem laudantium excepturi repellendus. Nostrum perspiciatis
+          exercitationem
+          nemo accusantium cupiditate doloribus rem. Mollitia est optio consectetur ex quaerat sunt laboriosam, iure
+          nesciunt eos expedita autem reiciendis, eaque, enim dolorum fugiat! Eum, maiores. Deserunt et quae vitae
+          assumenda accusamus consectetur vel consequuntur praesentium dolores? Sit reprehenderit ducimus commodi quia
+          necessitatibus blanditiis, rerum nulla modi, ea consequuntur similique eius magni quos! Eum velit magnam enim
+          voluptatem praesentium sint nemo dignissimos cumque voluptates! Laboriosam, aperiam sit dolorum maxime tempora
+          illum iste. Quaerat eius numquam beatae consequuntur ab dolores facere aliquid fuga recusandae fugit qui
+          repellat
+          voluptate fugiat doloribus cupiditate libero odio, quo voluptates repellendus optio ipsum modi maxime?
+          Accusantium cumque odit illum cupiditate neque sed officiis doloremque facilis et, quisquam rerum ratione
+          officia
+          magnam quam eaque ab ducimus corrupti fugiat sunt hic soluta expedita illo ea at! Ab fuga vero sint quos!
+          Officia
+          cupiditate laboriosam ab?
+        </p>
+        <mat-checkbox [disabled]="agreementNotRead" [formControl]="accepted">J'accepte</mat-checkbox>
+        <mat-error *ngIf="accepted.invalid">{{getErrorMessageForAgreement()}}</mat-error>
+      </mat-card-content>
+    </mat-card>
+  </div>
+<div class="btns">
+  <button mat-stroked-button color="primary" (click)="showPrevStep()">Précédent</button>
+<button mat-stroked-button color="primary" [disabled]="accepted.invalid" (click)="sendForm()">Valider</button>
+</div>
+
