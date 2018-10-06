@@ -4,7 +4,6 @@
       <mat-label>Email</mat-label>
       <mat-error *ngIf="email.invalid">{{getErrorMessageForEmail()}}</mat-error>
       <input type="email" [formControl]="email" name="email" matInput placeholder="Votre email s'il vous plait!">
-      <mat-hint>Hint</mat-hint>
     </mat-form-field>
   </p>
   <p>
@@ -12,8 +11,7 @@
       <mat-label>Password</mat-label>
       <input matInput [formControl]="password" name="password"  placeholder="Votre password s'il vous plait!">
       <mat-error *ngIf="password.invalid">{{getErrorMessageForPassword()}}</mat-error>
-      <mat-hint>Hint</mat-hint>
     </mat-form-field>
   </p>
-<button mat-stroked-button color="primary" [disabled]="password.invalid || email.invalid" (click)="showNextStep()">Suivant</button>
+<button mat-stroked-button color="primary" [disabled]="password.invalid || email.invalid" (click)="showNextStep()">Connexion</button>
 </div>

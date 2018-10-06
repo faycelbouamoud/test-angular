@@ -22,6 +22,14 @@ export class AppComponent {
     this.showForm = true;
   }
   sendForm(args) {
-    this.loginService.login(this.userToLogin);
+    this.loginService.login(this.userToLogin)
+      .subscribe(res => {
+        console.log(res);
+      },
+        errr => {
+          console.log('Oops some error!', errr);
+        }
+      )
+      ;
   }
 }
